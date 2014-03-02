@@ -53,6 +53,16 @@
         <input type="url" name="url" ng-model="user.url">
         <span ng-show="myForm.url.$error.url">Not valid web url!</span>
       </p>
+      <p>18+: <input type="checkbox" ng-model="user.adult" ng-true-value="adult" ng-false-value="child">
+      </p>
+      <p>Phone:
+        <input type="radio" ng-model="user.phone" value="iPhone"> iPhone
+        <input type="radio" ng-model="user.phone" value="Android"> Android
+      <p>Memo:
+        <textarea ng-model="user.memo" ng-maxlength="140" cols="30" rows="10"></textarea>
+        {{140 - user.memo.length}}
+      </p>
+      </p>
       <p><input type="submit" value="add"></p>
       <pre>{{user|json}}</pre><!-- for dubug -->
     </form>
