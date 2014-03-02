@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" ng-app>
 <head>
   <meta charset="UTF-8">
   <title>Angularの練習</title>
+  <script src="http://code.angularjs.org/1.2.14/angular.min.js"></script>
 </head>
 <body>
   <h1>AngularJSの練習</h1>
-  <P>こんにちは！</P>
+  <input type="text" ng-model="name">
+  <P>こんにちは！{{name}}</P>
 </body>
 </html>
