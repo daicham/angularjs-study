@@ -16,8 +16,14 @@
     <p>{{2000|currency}}</p>
     <p>{{today|date}}</p>
     <ul>
-      <li ng-repeat="user in users">
+      <li ng-repeat="user in users|orderBy:'score'|limitTo:2">
         {{user.name|uppercase}} {{user.score|number:4}}
+      </li>
+    </ul>
+    <input type="text" ng-model="query.name">
+    <ul>
+      <li ng-repeat="user in users|filter:query">
+        {{user.name}} {{user.score|number:4}}
       </li>
     </ul>
   </div>
