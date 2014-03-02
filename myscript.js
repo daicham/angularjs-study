@@ -10,7 +10,9 @@ var mainCtrl = function($scope) {
   $scope.today = new Date();
 
   $scope.addUser = function() {
-  }
+  };
+
+  $scope.colors = ['red', 'blue', 'pink'];
 };
 
 var userItemCtrl = function($scope) {

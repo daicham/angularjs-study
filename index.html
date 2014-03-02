@@ -58,10 +58,13 @@
       <p>Phone:
         <input type="radio" ng-model="user.phone" value="iPhone"> iPhone
         <input type="radio" ng-model="user.phone" value="Android"> Android
+      </p>
       <p>Memo:
         <textarea ng-model="user.memo" ng-maxlength="140" cols="30" rows="10"></textarea>
         {{140 - user.memo.length}}
       </p>
+      <p>Color:
+        <select ng-model="user.color" ng-options="color for color in colors"></select>
       </p>
       <p><input type="submit" value="add"></p>
       <pre>{{user|json}}</pre><!-- for dubug -->
