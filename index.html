@@ -35,8 +35,13 @@
         <button ng-click="increment()">+1</button>
       </li>
     </ul>
-    <form name="myName" ng-submit="addUser()">
-      <p>Name: <input type="text" name="name" ng-model="user.name"></p>
+    <form novalidate name="myForm" ng-submit="addUser()">
+      <p>Name:
+        <input type="text" name="name" ng-model="user.name" required ng-minlength="5" ng-maxlength="8">
+        <span ng-show="myForm.$error.required">Required!</span>
+        <span ng-show="myForm.$error.minlength">Too short!</span>
+        <span ng-show="myForm.$error.maxlength">Too long!</span>
+      </p>
       <p><input type="submit" value="add"></p>
       <pre>{{user|json}}</pre><!-- for dubug -->
     </form>
