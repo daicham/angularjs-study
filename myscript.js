@@ -3,5 +3,6 @@ var mainCtrl = function($scope) {
     {"name": "taguchi", "score": 55.22},
     {"name": "tanaka", "score": 38.22},
     {"name": "yamada", "score": 11.22},
-  ]
+  ];
+  $scope.today = new Date();
 };
