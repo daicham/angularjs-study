@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Angularの練習</title>
-  <script src="http://code.angularjs.org/1.2.14/angular.min.js"></script>
+  <script src="angular.min.js"></script>
   <script src="myscript.js"></script>
   <style>
     .even {
@@ -35,6 +35,11 @@
         <button ng-click="increment()">+1</button>
       </li>
     </ul>
+    <form name="myName" ng-submit="addUser()">
+      <p>Name: <input type="text" name="name" ng-model="user.name"></p>
+      <p><input type="submit" value="add"></p>
+      <pre>{{user|json}}</pre><!-- for dubug -->
+    </form>
   </div>
 </body>
 </html>

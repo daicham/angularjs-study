@@ -8,6 +8,9 @@ var mainCtrl = function($scope) {
     {"name": "watanabe", "score": 4.22}
   ];
   $scope.today = new Date();
+
+  $scope.addUser = function() {
+  }
 };
 
 var userItemCtrl = function($scope) {
