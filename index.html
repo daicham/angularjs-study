@@ -30,8 +30,9 @@
     </ul>
     <input type="text" ng-model="query.name">
     <ul>
-      <li ng-repeat="user in users|filter:query" ng-class-even="'even'" ng-class-odd="'odd'">
+      <li ng-repeat="user in users|filter:query" ng-class-even="'even'" ng-class-odd="'odd'" ng-controller="userItemCtrl">
         {{$index+1}} {{user.name}} {{user.score|number:4}}
+        <button ng-click="increment()">+1</button>
       </li>
     </ul>
   </div>
